@@ -12,7 +12,7 @@ class ThemeX {
     final isDark = brightness == Brightness.dark;
     final baseColor = isDark ? AppColor.textWhite : AppColor.black;
 
-    return GoogleFonts.poppinsTextTheme().copyWith(
+    return GoogleFonts.montserratTextTheme().copyWith(
       headlineLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, color: baseColor),
       headlineMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.w600, color: baseColor),
       titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: baseColor),

@@ -14,7 +14,7 @@ class AlertX{
           return Dialog(
             shape: RoundedRectangleBorder(
                 borderRadius:
-                BorderRadius.circular(16.0)), //this right here
+                BorderRadius.circular(16.0)),
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: ListView(
@@ -27,7 +27,7 @@ class AlertX{
                       "$title",
                     ),
                   ),
-                  AppSpaces.verticalSectionSpaceS(),
+                  AppSpaces.verticalSectionSpaceS,
                   Container(
                     padding: EdgeInsets.only(top: 9),
                     child: Text(
@@ -36,7 +36,7 @@ class AlertX{
                       style: AppTextStyle.subtitle,
                     ),
                   ),
-                  AppSpaces.verticalSectionSpaceL(),
+                  AppSpaces.verticalSectionSpaceL,
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -48,7 +48,7 @@ class AlertX{
                             ),
                       ),
 
-                      AppSpaces.horizontalSectionSpaceXS(),
+                      AppSpaces.horizontalSectionSpaceXS,
                     ],
                   )
                 ],
@@ -74,7 +74,7 @@ class AlertX{
           return Dialog(
             shape: RoundedRectangleBorder(
                 borderRadius:
-                BorderRadius.circular(16.0)), //this right here
+                BorderRadius.circular(16.0)),
             child: Padding(
               padding: const EdgeInsets.all(12.0),
               child: ListView(
@@ -88,7 +88,7 @@ class AlertX{
                       maxLines: 5,
                     ),
                   ),
-                  AppSpaces.verticalSectionSpaceL(),
+                  AppSpaces.verticalSectionSpaceL,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -98,7 +98,7 @@ class AlertX{
                               optionText1,
                             ),
                       ),
-                      AppSpaces.horizontalSectionSpaceM(),
+                      AppSpaces.horizontalSectionSpaceM,
                       GestureDetector(
                         onTap: optAction2,
                         child: Text(
@@ -106,7 +106,7 @@ class AlertX{
                           ),
 
                       ),
-                      AppSpaces.horizontalSectionSpaceXS(),
+                      AppSpaces.horizontalSectionSpaceXS,
                     ],
                   )
                 ],

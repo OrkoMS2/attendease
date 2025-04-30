@@ -11,6 +11,14 @@ class AppShadow{
       offset: const Offset(0, 1),
     )
   ];
+  static List<BoxShadow> topAppBarBarShadow = [
+    BoxShadow(
+      color: AppColor.blackPitch,
+      spreadRadius: 0.r,
+      blurRadius: 10.r,
+      offset: const Offset(0, 2),
+    ),
+  ];
   static List<BoxShadow> softShadow = [
     BoxShadow(
       color: AppColor.black.withOpacity(0.05),

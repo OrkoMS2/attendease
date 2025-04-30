@@ -1,60 +1,56 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import '../../core/app_export.dart';
 
 class ThemeController extends GetxController {
   late bool isDarkTheme;
-  late bool themeHiveSetting;
 
-  final Box<dynamic> settingsHiveBox = Hive.box('settings');
+  final Box<dynamic> settingsHiveBox = Hive.box(AppSharedKey.settings);
+
+  static const String _keyIsDarkMode = 'isDarkMode';
+  static const String _keyCurrentLocale = 'currentLocal';
 
   ThemeMode get themeStateFromHiveSettingBox =>
-      _getThemeFromHiveBox() ? ThemeMode.dark : ThemeMode.light;
+      getThemeFromHiveBox() ? ThemeMode.dark : ThemeMode.light;
 
   @override
   void onInit() {
-    isDarkTheme = _getThemeFromHiveBox();
+    isDarkTheme = getThemeFromHiveBox();
     super.onInit();
   }
 
-  bool _getThemeFromHiveBox() {
-    themeHiveSetting =
-        settingsHiveBox.get('isDarkMode', defaultValue: Get.isDarkMode);
-    return themeHiveSetting;
+  bool getThemeFromHiveBox() {
+    return settingsHiveBox.get(_keyIsDarkMode, defaultValue: Get.isDarkMode);
   }
 
-  void _updateHiveThemeSetting(bool boolData) {
-    settingsHiveBox.put('isDarkMode', boolData);
+  void _updateHiveThemeSetting(bool value) {
+    settingsHiveBox.put(_keyIsDarkMode, value);
   }
 
   void changeTheme({
     required RxBool isDarkMode,
-    required Rx<String> modeName,
+    required RxString modeName,
   }) {
-    if (Get.isDarkMode) {
-      modeName.value = 'light';
-      isDarkMode.value = false;
-      isDarkTheme = false;
-      _updateHiveThemeSetting(false);
-      _changeThemeMode(ThemeMode.light);
-    } else {
-      modeName.value = 'dark';
-      isDarkMode.value = true;
-      isDarkTheme = true;
-      _updateHiveThemeSetting(true);
-      _changeThemeMode(ThemeMode.dark);
-    }
+    final bool switchToDark = !Get.isDarkMode;
+
+    modeName.value = switchToDark ? 'dark' : 'light';
+    isDarkMode.value = switchToDark;
+    isDarkTheme = switchToDark;
+
+    _updateHiveThemeSetting(switchToDark);
+    _changeThemeMode(switchToDark ? ThemeMode.dark : ThemeMode.light);
   }
 
-  void _changeThemeMode(ThemeMode themeMode) => Get.changeThemeMode(themeMode);
+  void _changeThemeMode(ThemeMode themeMode) {
+    Get.changeThemeMode(themeMode);
+  }
 
-  setLocale(Locale locale) async {
-    settingsHiveBox.put('currentLocal', "${locale.languageCode}_${locale.countryCode}");
+  Future<void> setLocale(Locale locale) async {
+    final String formatted = "${locale.languageCode}_${locale.countryCode}";
+    await settingsHiveBox.put(_keyCurrentLocale, formatted);
   }
 
   Future<Locale> getLocale() async {
-    String languageCode =
-    settingsHiveBox.get('currentLocal',defaultValue: "en_US");
-    return Locale(languageCode.split("_")[0],languageCode.split("_")[1]);
+    final String languageCode = settingsHiveBox.get(_keyCurrentLocale, defaultValue: "en_US");
+    final parts = languageCode.split("_");
+    return Locale(parts[0], parts[1]);
   }
 }

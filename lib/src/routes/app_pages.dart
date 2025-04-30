@@ -1,4 +1,6 @@
 
+import 'package:attendease/src/modules/customer/bindings/customer_binding.dart';
+import 'package:attendease/src/modules/customer/views/customer_screen.dart';
 import 'package:get/get.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_screen.dart';
@@ -19,13 +21,13 @@ class AppRoutePages  {
         SplashBinding(),
       ],
     ),
-    // GetPage(
-    //   name: AppRouteNames.rootRoute,
-    //   page: () => BuyerRootView(),
-    //   bindings: [
-    //     RootBinding(),
-    //   ],
-    // ),
+    GetPage(
+      name: AppRouteNames.customerRoute,
+      page: () => const CustomerScreen(),
+      bindings: [
+        CustomerBinding(),
+      ],
+    ),
 
   ];
 }

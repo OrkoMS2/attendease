@@ -15,6 +15,12 @@ class AppTextStyle {
     color: AppColor.title,
   );
 
+  static TextStyle largeCaption = TextStyle(
+    fontSize: 22.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColor.title,
+  );
+
   static TextStyle title = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w600,

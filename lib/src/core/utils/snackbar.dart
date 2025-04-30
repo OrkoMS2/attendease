@@ -24,7 +24,7 @@ class SnackBarX{
       titleText: Text(
         title.tr,
         style: TextStyle(
-          fontFamily: GoogleFonts.inter().fontFamily,
+          fontFamily: GoogleFonts.montserrat().fontFamily,
           color: Colors.red,
           fontWeight: FontWeight.w800,
           fontSize: 18
@@ -33,7 +33,7 @@ class SnackBarX{
       messageText:  Text(
         message.tr,
         style: TextStyle(
-          fontFamily: GoogleFonts.inter().fontFamily,
+          fontFamily: GoogleFonts.montserrat().fontFamily,
           color:AppColor.title,
           fontSize: 14
         ),
@@ -55,7 +55,7 @@ class SnackBarX{
       titleText: Text(
         title.tr,
         style: TextStyle(
-            fontFamily: GoogleFonts.inter().fontFamily,
+            fontFamily: GoogleFonts.montserrat().fontFamily,
             color: AppColor.subtitle,
             fontWeight: FontWeight.w800,
             fontSize: 18
@@ -64,7 +64,7 @@ class SnackBarX{
       messageText:  Text(
         message.tr,
         style: TextStyle(
-            fontFamily: GoogleFonts.inter().fontFamily,
+            fontFamily: GoogleFonts.montserrat().fontFamily,
             color:AppColor.subtitle,
             fontSize: 14
         ),
@@ -83,7 +83,7 @@ class SnackBarX{
       titleText: Text(
         title.tr,
         style: TextStyle(
-            fontFamily: GoogleFonts.inter().fontFamily,
+            fontFamily: GoogleFonts.montserrat().fontFamily,
             color: AppColor.title,
             fontWeight: FontWeight.w800,
             fontSize: 18
@@ -92,7 +92,7 @@ class SnackBarX{
       messageText:  Text(
         message.tr,
         style: TextStyle(
-            fontFamily: GoogleFonts.inter().fontFamily,
+            fontFamily: GoogleFonts.montserrat ().fontFamily,
             color:AppColor.title,
             fontSize: 14
         ),

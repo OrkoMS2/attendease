@@ -1,28 +1,21 @@
-import 'dart:io';
-
-import "../../../core/app_export.dart";
-import 'package:hive_flutter/hive_flutter.dart';
+import '../../../core/app_export.dart';
+import '../../../routes/app_routes.dart';
 import '../../../theme/controller/theme_controller.dart';
-
 
 class SplashController extends GetxController {
   final ThemeController _themeController = Get.find();
 
-
-
-  Future getLocaleData()async{
-    Locale locale=await _themeController.getLocale();
-    Get.updateLocale( locale);
-  }
-
   @override
   void onReady() {
     super.onReady();
-    getLocaleData().then((value){
-      Future.delayed(const Duration(milliseconds: 1500), () {
-      });
-    });
-
+    _initialize();
   }
 
+  Future<void> _initialize() async {
+    final locale = await _themeController.getLocale();
+    Get.updateLocale(locale);
+
+    await Future.delayed(const Duration(milliseconds: 100));
+    Get.offAllNamed(AppRouteNames.customerRoute);
+  }
 }
