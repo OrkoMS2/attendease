@@ -18,5 +18,22 @@ class AppIcon {
   static const String addIcon = "assets/icons/add.svg";
   static const String uploadIcon = "assets/icons/upload.svg";
   static const String filterIcon = "assets/icons/filter.png";
+  static const String guestBookIcon = "assets/icons/guest_book.svg";
+  static const String birthdayIcon = "assets/icons/birthday.svg";
+  static const String anniversaryIcon = "assets/icons/anniversary.svg";
+  static const String orderItemIcon = "assets/icons/order_item.svg";
+  static const String vehicleIcon = "assets/icons/vehicle.svg";
+  static const String allergyIcon = "assets/icons/allergy.svg";
+  static const String visitIcon = "assets/icons/visit.svg";
+  static const String generalIcon = "assets/icons/general.svg";
+  static const String spRelationIcon = "assets/icons/sp_relation.svg";
+  static const String seatingIcon = "assets/icons/seating.svg";
+  static const String spNoteIcon = "assets/icons/sp_note.svg";
+  static const String allergiesIcon = "assets/icons/allergies.svg";
+  static const String noOrderIcon = "assets/icons/no_order.svg";
+  static const String noReviewIcon = "assets/icons/no_review.svg";
+  static const String googleIcon = "assets/icons/google.png";
+  static const String yelpIcon = "assets/icons/yelp.png";
+  static const String foursquareIcon = "assets/icons/foursquare.png";
 
 }

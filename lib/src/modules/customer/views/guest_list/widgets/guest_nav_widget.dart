@@ -1,7 +1,7 @@
 
 
-import '../../../../core/app_export.dart';
-import '../../controllers/customer_controller.dart';
+import '../../../../../core/app_export.dart';
+import '../../../controllers/customer_controller.dart';
 
 class GuestNavWidget extends GetView<CustomerController>{
   const GuestNavWidget({super.key});

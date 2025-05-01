@@ -1,5 +1,5 @@
-import '../../../../core/app_export.dart';
-import '../../controllers/customer_controller.dart';
+import '../../../../../core/app_export.dart';
+import '../../../controllers/customer_controller.dart';
 
 class GuestListView extends GetView<CustomerController> {
   const GuestListView({super.key});
@@ -7,7 +7,8 @@ class GuestListView extends GetView<CustomerController> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: const BouncingScrollPhysics(),
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       itemCount: controller.guestLists.length,
       itemBuilder: (context, index) {
         final guest = controller.guestLists[index];

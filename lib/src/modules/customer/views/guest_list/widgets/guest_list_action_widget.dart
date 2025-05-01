@@ -1,6 +1,6 @@
 
-import '../../../../core/app_export.dart';
-import '../../controllers/customer_controller.dart';
+import '../../../../../core/app_export.dart';
+import '../../../controllers/customer_controller.dart';
 
 class GuestListActionWidget extends GetView<CustomerController>{
   const GuestListActionWidget({super.key});

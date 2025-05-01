@@ -1,4 +1,5 @@
-import 'package:attendease/src/modules/customer/views/widgets/guest_list_widget.dart';
+import 'package:attendease/src/modules/customer/views/guest_details/guest_details_widget.dart';
+import 'package:attendease/src/modules/customer/views/guest_list/guest_list_widget.dart';
 
 import '../../../core/app_export.dart';
 import '../controllers/customer_controller.dart';
@@ -25,30 +26,7 @@ class CustomerScreen extends GetView<CustomerController> {
               onTap: controller.hideGuestList,
               child: Container(
                 color: AppColor.offWhite,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Obx(() {
-                      return controller.isGuestListVisible.value?SizedBox.shrink():
-                      GestureDetector(
-                        onTap: controller.showGuestList,
-                        child: Container(
-                          color: AppColor.offWhite,
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              AppSpaces.horizontalSectionSpaceXXS,
-                              Icon(Icons.arrow_back_ios_rounded,
-                                size: 17.sp,),
-                              Text("guest_book_lbl".tr,
-                                style: AppTextStyle.largeCaption,),
-                            ],
-                          ),
-                        ),
-                      );
-                    })
-                  ],
-                ),
+                child: GuestDetailsWidget()
               ),
             ),
           ),

@@ -1,6 +1,7 @@
 import '../app_export.dart';
 
 class AppSpaces {
+  static Widget verticalSectionSpaceXXXXS = SizedBox(height: 4.h);
   static Widget verticalSectionSpaceXXXS = SizedBox(height: 5.5.h);
   static Widget verticalSectionSpaceXXS = SizedBox(height: 6.5.h);
   static Widget verticalSectionSpaceXS = SizedBox(height: 10.h);
@@ -21,14 +22,15 @@ class AppSpaces {
 
   static Widget horizontalSectionSpaceXXXS = SizedBox(width: 3.5.w);
   static Widget horizontalSectionSpaceXXS = SizedBox(width: 6.w);
+  static Widget horizontalSectionSpaceXXXSS = SizedBox(width: 8.w);
   static Widget horizontalSectionSpaceXXSS = SizedBox(width: 10.w);
   static Widget horizontalSectionSpaceXS = SizedBox(width: 12.w);
   static Widget horizontalSectionSpaceS = SizedBox(width: 14.5.w);
-  static Widget horizontalSectionSpaceM5 = SizedBox(width: 18.w);
+  static Widget horizontalSectionSpaceM5 = SizedBox(width: 16.w);
   static Widget horizontalSectionSpaceM4 = SizedBox(width: 20.w);
   static Widget horizontalSectionSpaceM3 = SizedBox(width: 24.w);
   static Widget horizontalSectionSpaceM2 = SizedBox(width: 28.w);
-  static Widget horizontalSectionSpaceM = SizedBox(width: 36.w);
+  static Widget horizontalSectionSpaceM = SizedBox(width: 34.w);
   static Widget horizontalSectionSpaceL2 = SizedBox(width: 40.w);
   static Widget horizontalSectionSpaceL = SizedBox(width: 52.w);
   static Widget horizontalSectionSpaceXL = SizedBox(width: 68.w);

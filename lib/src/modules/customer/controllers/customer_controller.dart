@@ -11,6 +11,27 @@ class CustomerController extends GetxController {
   final List<GuestItemModel> guestLists = guestListData;
   TextEditingController searchTextController = TextEditingController();
   RxInt selectedGuestIndex = 0.obs;
+  var selectedIndex = 0.obs;
+
+  final List<String> tabs = [
+    'Profile',
+    'Reservation',
+    'Payment',
+    'Feedback',
+    'Order History',
+  ];
+  final List<Map<String, String>> noteItems = const [
+    {"icon": AppIcon.generalIcon, "title": "General"},
+    {"icon": AppIcon.spRelationIcon, "title": "Special Relation"},
+    {"icon": AppIcon.seatingIcon, "title": "Seating Preferences"},
+    {"icon": AppIcon.spNoteIcon, "title": "Special Note*"},
+    {"icon": AppIcon.allergiesIcon, "title": "Allergies"},
+  ];
+  void selectTab(int index) {
+    selectedIndex.value = index;
+  }
+
+
   void toggleGuestList() async{
     await Future.delayed(const Duration(milliseconds: 300));
     isGuestListVisible.toggle();
