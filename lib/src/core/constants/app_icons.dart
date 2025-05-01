@@ -12,4 +12,11 @@ class AppIcon {
   static const String switchIcon = "assets/icons/switch.svg";
   static const String wifiIcon = "assets/icons/wifi.svg";
   static const String notificationIcon = "assets/icons/notification.svg";
+  static const String expandIcon = "assets/icons/expand_icon.svg";
+  static const String searchIcon = "assets/icons/search.svg";
+  static const String micIcon = "assets/icons/mic.svg";
+  static const String addIcon = "assets/icons/add.svg";
+  static const String uploadIcon = "assets/icons/upload.svg";
+  static const String filterIcon = "assets/icons/filter.png";
+
 }

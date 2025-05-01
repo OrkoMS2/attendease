@@ -4,5 +4,5 @@ class AppRouteNames {
   static const initialRoute = '/splash';
 
   /// Guest/customer detail section after login
-  static const customerRoute = '/customer';
+  static const rootRoute = '/root';
 }

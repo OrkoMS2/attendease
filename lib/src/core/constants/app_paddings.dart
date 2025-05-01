@@ -9,6 +9,7 @@ class AppPaddings {
   static EdgeInsets alertTopPadding = EdgeInsets.only(top: 10.h);
 
   static EdgeInsets noPadding = EdgeInsets.zero;
+  static EdgeInsets guestListPadding = EdgeInsets.only(left: 28.w,right: 28.w,top: 32.h);
 
   static EdgeInsets buttonSmallPadding = EdgeInsets.symmetric(horizontal: 10.w, vertical: 8.h);
   static EdgeInsets buttonLargePadding = EdgeInsets.symmetric(horizontal: 20.w, vertical: 12.h);

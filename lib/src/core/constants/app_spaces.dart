@@ -8,7 +8,7 @@ class AppSpaces {
   static Widget verticalSectionSpaceM3 = SizedBox(height: 15.h);
   static Widget verticalSectionSpaceM2 = SizedBox(height: 16.h);
   static Widget verticalSectionSpaceM = SizedBox(height: 18.h);
-  static Widget verticalSectionSpaceL4 = SizedBox(height: 26.h);
+  static Widget verticalSectionSpaceL4 = SizedBox(height: 25.h);
   static Widget verticalSectionSpaceL3 = SizedBox(height: 34.h);
   static Widget verticalSectionSpaceL2 = SizedBox(height: 42.h);
   static Widget verticalSectionSpaceL = SizedBox(height: 46.h);
@@ -24,8 +24,9 @@ class AppSpaces {
   static Widget horizontalSectionSpaceXXSS = SizedBox(width: 10.w);
   static Widget horizontalSectionSpaceXS = SizedBox(width: 12.w);
   static Widget horizontalSectionSpaceS = SizedBox(width: 14.5.w);
-  static Widget horizontalSectionSpaceM4 = SizedBox(width: 18.w);
-  static Widget horizontalSectionSpaceM3 = SizedBox(width: 20.w);
+  static Widget horizontalSectionSpaceM5 = SizedBox(width: 18.w);
+  static Widget horizontalSectionSpaceM4 = SizedBox(width: 20.w);
+  static Widget horizontalSectionSpaceM3 = SizedBox(width: 24.w);
   static Widget horizontalSectionSpaceM2 = SizedBox(width: 28.w);
   static Widget horizontalSectionSpaceM = SizedBox(width: 36.w);
   static Widget horizontalSectionSpaceL2 = SizedBox(width: 40.w);
