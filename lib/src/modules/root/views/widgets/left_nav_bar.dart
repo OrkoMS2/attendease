@@ -22,11 +22,9 @@ class LeftNavigationBar extends GetView<RootController> {
               },
               child: Container(
                 height: 146.h,
-                decoration: BoxDecoration(
-                  color: controller.selectedModuleIndex.value == index
-                      ? AppColor.blackPitch.withOpacity(0.3)
-                      : AppColor.black,
-                  border: const Border(
+                decoration: const BoxDecoration(
+                  color: AppColor.black,
+                  border: Border(
                     top: BorderSide(color: AppColor.blackPitch, width: 0.5),
                     bottom: BorderSide(color: AppColor.blackPitch, width: 0.5),
                   ),

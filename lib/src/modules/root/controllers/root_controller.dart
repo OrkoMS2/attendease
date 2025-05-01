@@ -2,6 +2,13 @@
 
 
 
+import 'package:attendease/src/modules/about/views/about_screen.dart';
+import 'package:attendease/src/modules/os/views/os_screen.dart';
+import 'package:attendease/src/modules/statistic/views/statistic_screen.dart';
+import 'package:attendease/src/modules/table/views/table_screen.dart';
+import 'package:attendease/src/modules/ticket/views/ticket_screen.dart';
+import 'package:flutter/cupertino.dart';
+
 import '../../../core/app_export.dart';
 import '../../../data/data_source/local/nav_item_list_data.dart';
 import '../../../data/models/local_response/nav_item_model.dart';
@@ -13,14 +20,14 @@ class RootController extends GetxController{
   RxInt selectedModuleIndex =0.obs;
   List<NavItemModel> navItems = navItemsData;
 
-  final List<Widget> modules = const [
-    CustomerScreen(),
-    OrderScreen(),
-    CustomerScreen(),
-    CustomerScreen(),
-    CustomerScreen(),
-    CustomerScreen(),
-    CustomerScreen(),
+  final List<Widget> modules =  [
+    const CustomerScreen(),
+    const OrderScreen(),
+    const TableScreen(),
+    const TicketScreen(),
+    const OsScreen(),
+    const StatisticScreen(),
+    const AboutScreen(),
   ];
 
   void toggleMenu()async{

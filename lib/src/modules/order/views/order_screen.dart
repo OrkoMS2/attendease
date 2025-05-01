@@ -15,5 +15,4 @@ class OrderScreen extends GetView<OrderController>{
       ],
     );
   }
-  
 }

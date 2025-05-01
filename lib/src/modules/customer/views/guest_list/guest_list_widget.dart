@@ -31,9 +31,7 @@ class GuestListWidget extends GetView<CustomerController> {
         AppSpaces.verticalSectionSpaceM3,
         const GuestListActionWidget(),
         AppSpaces.verticalSectionSpaceM3,
-        const Expanded(
-          child: GuestListView(),
-        ),
+        const GuestListView(),
       ]),
     );
   }

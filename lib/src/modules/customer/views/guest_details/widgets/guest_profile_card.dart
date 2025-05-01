@@ -129,7 +129,7 @@ class GuestProfileCard extends GetView<CustomerController> {
         AppSpaces.horizontalSectionSpaceM5,
         Column(
           children: [
-            _iconTextPanel(AppIcon.orderItemIcon, 'No Ordered Items', width: 275.w, height: 147.h),
+            _iconTextPanel(AppIcon.orderItemIcon, 'No Ordered Items', width: 275.w, height: 183.h),
             AppSpaces.verticalSectionSpaceS,
             _iconTextPanel(AppIcon.vehicleIcon, 'No recent vehicle to show', width: 275.w, height: 53.h),
           ],
@@ -289,12 +289,14 @@ class GuestProfileCard extends GetView<CustomerController> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(value, style: AppTextStyle.title2),
-          Text(
-            label,
-            style: AppTextStyle.caption.copyWith(
-              color: AppColor.subtitle,
-              fontSize: 10.sp,
+          Flexible(child: Text(value, style: AppTextStyle.title2)),
+          Flexible(
+            child: Text(
+              label,
+              style: AppTextStyle.caption.copyWith(
+                color: AppColor.subtitle,
+                fontSize: 10.sp,
+              ),
             ),
           ),
         ],

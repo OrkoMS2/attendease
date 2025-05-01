@@ -21,8 +21,8 @@ class GuestBookInfo extends StatelessWidget {
           children: [
             AppSpaces.verticalSectionSpaceM,
             SizedBox(
-              width: 56.w,
-              height: 56.w,
+              width: 54.w,
+              height: 54.w,
               child: SvgPicture.asset(
                 AppIcon.guestBookIcon,
                 width: 36.w,
