@@ -11,7 +11,7 @@ class TabBarWidget extends GetView<CustomerController> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          height: 44.h,
+          height: 44,
           padding:  EdgeInsets.all(6.w),
           decoration: BoxDecoration(
             color: Colors.white,

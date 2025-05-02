@@ -85,7 +85,7 @@ class GuestProfileCard extends GetView<CustomerController> {
 
   Widget _buildMetricsRow() {
     return Container(
-      height: 86.h,
+      height: 86,
       padding: AppPaddings.cardPadding,
       decoration: BoxDecoration(
         color: AppColor.offWhite,
@@ -129,9 +129,9 @@ class GuestProfileCard extends GetView<CustomerController> {
         AppSpaces.horizontalSectionSpaceM5,
         Column(
           children: [
-            _iconTextPanel(AppIcon.orderItemIcon, 'No Ordered Items', width: 275.w, height: 183.h),
+            _iconTextPanel(AppIcon.orderItemIcon, 'No Ordered Items', width: 275.w, height: 186),
             AppSpaces.verticalSectionSpaceS,
-            _iconTextPanel(AppIcon.vehicleIcon, 'No recent vehicle to show', width: 275.w, height: 53.h),
+            _iconTextPanel(AppIcon.vehicleIcon, 'No recent vehicle to show', width: 275.w, height: 50),
           ],
         ),
       ],
@@ -180,7 +180,7 @@ class GuestProfileCard extends GetView<CustomerController> {
 
   Widget _infoSection() {
     return Container(
-      height: 150.h,
+      height: 150,
       padding: AppPaddings.cardPadding,
       decoration: BoxDecoration(
         color: AppColor.offWhite,
@@ -204,7 +204,7 @@ class GuestProfileCard extends GetView<CustomerController> {
 
   Widget _loyaltySection() {
     return Container(
-      height: 150.h,
+      height: 150,
       padding: AppPaddings.cardPadding,
       decoration: BoxDecoration(
         color: AppColor.offWhite,
@@ -245,7 +245,7 @@ class GuestProfileCard extends GetView<CustomerController> {
 
   Widget _visitSection() {
     return Container(
-      height: 150.h,
+      height: 150,
       padding: AppPaddings.cardPadding,
       decoration: BoxDecoration(
         color: AppColor.offWhite,
