@@ -55,9 +55,10 @@ class LeftNavigationBar extends GetView<RootController> {
                                 !controller.isFullDrawerVisible.value )
                               Flexible(
                                 child: Text("Ver 4.9\nFL 3.3.6",
+                                  textAlign: TextAlign.center,
                                   style: AppTextStyle.title.copyWith(
                                       color: AppColor.white,
-                                      fontSize: 10.sp
+                                      fontSize: 8.sp
                                   ),),
                               )
                           ],

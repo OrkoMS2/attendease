@@ -15,7 +15,7 @@ class SplashController extends GetxController {
     final locale = await _themeController.getLocale();
     Get.updateLocale(locale);
 
-    await Future.delayed(const Duration(milliseconds: 100));
+    await Future.delayed(const Duration(milliseconds: 1500));
     Get.offAllNamed(AppRouteNames.rootRoute);
   }
 }

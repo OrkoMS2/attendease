@@ -1,8 +1,6 @@
 
 
 import 'package:attendease/src/core/app_export.dart';
-import 'package:get/get.dart';
-
 import '../../../data/data_source/local/guest_list_data.dart';
 import '../../../data/models/local_response/guest_item_model.dart';
 
@@ -14,18 +12,18 @@ class CustomerController extends GetxController {
   var selectedIndex = 0.obs;
 
   final List<String> tabs = [
-    'Profile',
-    'Reservation',
-    'Payment',
-    'Feedback',
-    'Order History',
+    'profile_tab_lbl',
+    'reservation_tab_lbl',
+    'payment_tab_lbl',
+    'feedback_tab_lbl',
+    'order_history_tab_lbl',
   ];
   final List<Map<String, String>> noteItems = const [
-    {"icon": AppIcon.generalIcon, "title": "General"},
-    {"icon": AppIcon.spRelationIcon, "title": "Special Relation"},
-    {"icon": AppIcon.seatingIcon, "title": "Seating Preferences"},
-    {"icon": AppIcon.spNoteIcon, "title": "Special Note*"},
-    {"icon": AppIcon.allergiesIcon, "title": "Allergies"},
+    {"icon": AppIcon.generalIcon, "title": "general_note_lbl"},
+    {"icon": AppIcon.spRelationIcon, "title": "sp_relation_note_lbl"},
+    {"icon": AppIcon.seatingIcon, "title": "seating_note_lbl"},
+    {"icon": AppIcon.spNoteIcon, "title": "sp_note_lbl"},
+    {"icon": AppIcon.allergiesIcon, "title": "allergies_note_lbl"},
   ];
   void selectTab(int index) {
     selectedIndex.value = index;

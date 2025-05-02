@@ -1,5 +1,6 @@
 
 import '../../../../core/app_export.dart';
+import '../../../../core/components/app_bar_time_display.dart';
 import '../../controllers/root_controller.dart';
 
 class TopAppBar extends GetView<RootController>{
@@ -87,7 +88,7 @@ class TopAppBar extends GetView<RootController>{
                               ),
                               AppSpaces.horizontalSectionSpaceXS,
                               Text(
-                                "Clocked in at 09 : 33 AM",
+                                "Clocked in at ${controller.getCurrentFormattedTime()}",
                                 style: AppTextStyle.title.copyWith(
                                     fontSize: 21.sp, color: AppColor.white),
                               )
@@ -95,11 +96,7 @@ class TopAppBar extends GetView<RootController>{
                           ),
                           Row(
                             children: [
-                              Text(
-                                "10 : 20 AM",
-                                style: AppTextStyle.title.copyWith(
-                                    fontSize: 21.sp, color: AppColor.white),
-                              ),
+                              const AppBarTimeDisplay(),
                               AppSpaces.horizontalSectionSpaceM3,
                               Container(
                                 width: 56.w,
@@ -112,10 +109,10 @@ class TopAppBar extends GetView<RootController>{
                                   height: 22.h,
                                 ),
                               ),
-                              AppSpaces.horizontalSectionSpaceXXSS,
+                              AppSpaces.horizontalSectionSpaceXXXS,
                               Container(
                                 width: 56.w,
-                                height: 56.h,
+                                height: 56.w,
                                 alignment: Alignment.center,
                                 child: Stack(
                                   alignment: Alignment.topRight,
@@ -124,11 +121,11 @@ class TopAppBar extends GetView<RootController>{
                                       AppIcon.notificationIcon,
                                       semanticsLabel: 'notification',
                                       width: 27.w,
-                                      height: 27.h,
+                                      height: 27.w,
                                     ),
                                     Container(
-                                      width: 15.w,
-                                      height: 15.w,
+                                      width: 12.w,
+                                      height: 12.w,
                                       decoration: const BoxDecoration(
                                           color: AppColor.primary,
                                           shape: BoxShape.circle
@@ -147,7 +144,7 @@ class TopAppBar extends GetView<RootController>{
             ),
           ),
           Container(
-            height: 30.h,
+            height: 28.h,
             width: 200.w,
             alignment: Alignment.topCenter,
             decoration: BoxDecoration(
@@ -158,7 +155,7 @@ class TopAppBar extends GetView<RootController>{
             ),
             child: SvgPicture.asset(
               AppIcon.expandIcon,
-              semanticsLabel: 'notification',
+              semanticsLabel: 'expanded',
               width: 14.w,
               height: 14.h,
             ),

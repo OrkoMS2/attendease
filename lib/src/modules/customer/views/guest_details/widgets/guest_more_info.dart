@@ -18,32 +18,32 @@ class GuestMoreInfo extends GetView<CustomerController> {
               _SectionColumn(
                 leftChild: _InfoCard(
                   iconPath: AppIcon.allergyIcon,
-                  text: 'No Allergies',
-                  title: 'Allergies',
-                  buttonText: 'Add',
+                  text: 'no_allergies',
+                  title: 'allergies_lbl',
+                  buttonText: 'add_btn',
                   onPressed: () {},
                 ),
                 rightChild: _InfoCard(
                   iconPath: AppIcon.visitIcon,
-                  title: "Upcoming Visits",
-                  text: 'No Upcoming Visits',
-                  buttonText: 'Book A Visit',
+                  title: "upcoming_visit",
+                  text: 'no_upcoming_visit',
+                  buttonText: 'book_visit_btn',
                   onPressed: () {},
                 ),
               ) :
               _SectionRow(
                 leftChild: _InfoCard(
                   iconPath: AppIcon.allergyIcon,
-                  text: 'No Allergies',
-                  title: 'Allergies',
-                  buttonText: 'Add',
+                  text: 'no_allergies',
+                  title: 'allergies_lbl',
+                  buttonText: 'add_btn',
                   onPressed: () {},
                 ),
                 rightChild: _InfoCard(
                   iconPath: AppIcon.visitIcon,
-                  title: "Upcoming Visits",
-                  text: 'No Upcoming Visits',
-                  buttonText: 'Book A Visit',
+                  title: "upcoming_visit",
+                  text: 'no_upcoming_visit',
+                  buttonText: 'book_visit_btn',
                   onPressed: () {},
                 ),
               ),
@@ -57,8 +57,8 @@ class GuestMoreInfo extends GetView<CustomerController> {
             children: [
               _InfoCard(
                 iconPath: AppIcon.noOrderIcon,
-                title: "RECENT ORDERS",
-                text: 'No Recent Orders to Show',
+                title: "recent_orders",
+                text: 'no_recent_orders',
                 buttonText: '',
                 showButton: false,
                 onPressed: () {},
@@ -68,8 +68,8 @@ class GuestMoreInfo extends GetView<CustomerController> {
                 return controller.selectedGuestIndex.value==1?
                 const GuestReviewSection():_InfoCard(
                   iconPath: AppIcon.noReviewIcon,
-                  title: "Online reviews",
-                  text: 'No Online Review to Show',
+                  title: "online_reviews",
+                  text: 'no_online_reviews',
                   buttonText: '',
                   showButton: false,
                   onPressed: () {},
@@ -93,7 +93,7 @@ class _SectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         padding: AppPaddings.tabPadding,
-        child: Text(title.toUpperCase(), style: AppTextStyle.body.copyWith(
+        child: Text(title.tr.toUpperCase(), style: AppTextStyle.body.copyWith(
             fontWeight: FontWeight.w600, color: AppColor.paragraph)));
   }
 }
@@ -164,7 +164,7 @@ class _InfoCard extends StatelessWidget {
       children: [
         Container(
             padding: AppPaddings.tabPadding,
-            child: Text(title.toUpperCase(), style: AppTextStyle.body.copyWith(
+            child: Text(title.tr.toUpperCase(), style: AppTextStyle.body.copyWith(
                 fontWeight: FontWeight.w600, color: AppColor.paragraph))),
         Container(
           height: 60.h,
@@ -185,7 +185,7 @@ class _InfoCard extends StatelessWidget {
                       child: const VerticalDivider(
                         width: 1, thickness: 1, color: AppColor.borderGrey,)),
                   AppSpaces.horizontalSectionSpaceXXSS,
-                  Text(text,
+                  Text(text.tr,
                       style: AppTextStyle.title2.copyWith(fontSize: 14.sp)),
                 ],
               ),
@@ -197,10 +197,10 @@ class _InfoCard extends StatelessWidget {
                     color: AppColor.black,
                     borderRadius: BorderRadius.circular(50),
                   ),
-                  child: Text(buttonText, style: AppTextStyle.subtitle.copyWith(
+                  child: Text(buttonText.tr, style: AppTextStyle.subtitle.copyWith(
                       fontSize: 12.sp, color: AppColor.white)),
                 ),
-              ) : SizedBox.shrink(),
+              ) : const SizedBox.shrink(),
             ],
           ),
         ),
@@ -219,8 +219,9 @@ class _NoteSection extends GetView<CustomerController> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const _SectionTitle(title: 'NOTES'),
+          const _SectionTitle(title: 'notes_lbl'),
           Container(
+            padding: const EdgeInsets.symmetric(vertical: 8),
             decoration: BoxDecoration(
               color: AppColor.white,
               borderRadius: BorderRadius.circular(12.w),
@@ -277,38 +278,10 @@ class _NoteTile extends StatelessWidget {
                 ),
               ),
               AppSpaces.horizontalSectionSpaceXXS,
-              Text(title, style: AppTextStyle.title2),
+              Text(title.tr, style: AppTextStyle.title2),
             ],
           ),
-          Text('Add notes', style: AppTextStyle.caption),
-        ],
-      ),
-    );
-  }
-}
-
-
-class _EmptyInfoCard extends StatelessWidget {
-  final String icon;
-  final String text;
-
-  const _EmptyInfoCard({required this.icon, required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(bottom: 12.h),
-      padding: EdgeInsets.symmetric(horizontal: 12.w),
-      height: 60.h,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12.r),
-      ),
-      child: Row(
-        children: [
-          SvgPicture.asset(icon, width: 24.w, height: 24.h),
-          SizedBox(width: 10.w),
-          Text(text, style: TextStyle(fontSize: 14.sp)),
+          Text('add_notes'.tr, style: AppTextStyle.caption),
         ],
       ),
     );

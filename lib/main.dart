@@ -16,7 +16,10 @@ Future<void> initialize() async {
   await Hive.openBox(AppSharedKey.settings);
   final themeController = Get.put(ThemeController());
   final Locale locale = await themeController.getLocale();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight])
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.landscapeRight,
+    DeviceOrientation.landscapeLeft,
+  ])
       .then((_) =>
       runApp(AttendEase(
           themeController: themeController,

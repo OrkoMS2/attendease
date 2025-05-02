@@ -34,7 +34,7 @@ class TabBarWidget extends GetView<CustomerController> {
                       borderRadius: BorderRadius.circular(50),
                     ),
                     child: Text(
-                      controller.tabs[index],
+                      controller.tabs[index].tr,
                       style: AppTextStyle.subtitle.copyWith(
                         fontWeight: isSelected?FontWeight.w600:AppTextStyle.subtitle.fontWeight,
                         color: isSelected?AppColor.white:AppTextStyle.subtitle.color

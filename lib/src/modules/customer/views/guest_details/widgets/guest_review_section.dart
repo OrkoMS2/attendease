@@ -10,11 +10,11 @@ class GuestReviewSection extends StatelessWidget {
       children: [
         Container(
             padding: AppPaddings.tabPadding,
-            child: Text('ONLINE REVIEWS'.toUpperCase(),
+            child: Text('online_reviews'.tr.toUpperCase(),
                 style: AppTextStyle.body.copyWith(
                     fontWeight: FontWeight.w600, color: AppColor.paragraph))),
         Container(
-          height: 220.h,
+          height: 200,
           padding: EdgeInsets.symmetric(vertical: 20.h),
           decoration: BoxDecoration(
               color: Colors.white,
@@ -100,7 +100,7 @@ class ReviewCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                AppSpaces.verticalSectionSpaceXS,
+                const Spacer(flex: 2,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(5, (index) {
@@ -113,6 +113,7 @@ class ReviewCard extends StatelessWidget {
                 ),
                 AppSpaces.verticalSectionSpaceXXS,
                 Expanded(
+                  flex: 5,
                   child: Text(
                     review,
                     textAlign: TextAlign.center,
@@ -135,13 +136,13 @@ class ReviewCard extends StatelessWidget {
             height: 24.w,
             margin: EdgeInsets.only(top: 21.h),
             padding: AppPaddings.cardPadding,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 color: Colors.white,),
           ),
           Container(
             width: 48.w,
             height: 48.w,
-            padding: EdgeInsets.all(4),
+            padding: const EdgeInsets.all(4),
             child: Image.asset(platformLogo),
           ),
         ],

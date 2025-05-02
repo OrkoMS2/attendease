@@ -8,6 +8,7 @@ class GuestBookInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
+        width: double.infinity,
         padding: EdgeInsets.symmetric(horizontal: 55.0.w),
         margin: EdgeInsets.symmetric(horizontal: 18.w,vertical: 24.h),
         decoration: const BoxDecoration(
@@ -31,14 +32,12 @@ class GuestBookInfo extends StatelessWidget {
             ),
             AppSpaces.verticalSectionSpaceS,
             Text(
-              'Guest Book',
+              'guest_book_lbl'.tr,
               style: AppTextStyle.title2,
             ),
             AppSpaces.verticalSectionSpaceS,
             Text(
-              "The guest book feature remembers your guests' dietary needs, allergies, and favorite dishes. "
-                  "It organizes dining preferences for a customized and memorable experience, ensuring each visit "
-                  "is tailored to their individual needs.",
+              "guest_book_description".tr,
               textAlign: TextAlign.center,
               style: AppTextStyle.body.copyWith(
                 color: AppColor.subtitle,
