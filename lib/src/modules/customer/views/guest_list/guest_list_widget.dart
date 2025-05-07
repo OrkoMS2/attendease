@@ -13,6 +13,7 @@ class GuestListWidget extends GetView<CustomerController> {
   Widget build(BuildContext context) {
     return
     Container(
+      height: double.infinity.h,
       padding: AppPaddings.guestListPadding,
       decoration: const BoxDecoration(
         color: AppColor.offWhite,
