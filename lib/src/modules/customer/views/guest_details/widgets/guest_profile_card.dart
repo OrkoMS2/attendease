@@ -339,7 +339,7 @@ class GuestProfileCard extends GetView<CustomerController> {
 
   Widget _infoRow(String label, String value, {bool boldRight = false}) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8.h),
+      padding: EdgeInsets.symmetric(vertical: 4.h),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
